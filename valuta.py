@@ -10,13 +10,13 @@ load_dotenv(dotenv_path=env_path)
 def main():
     parser = argparse.ArgumentParser(
         description="Currency Exchange Calc - simple currency converter",
-        usage="python valuta.py --from USD --to DKK --amount 600")
+        usage="python valuta.py USD DKK 600")
     parser.add_argument("--key", help="ExchangeRate API key")
-    parser.add_argument("--from", dest="from_currency", required=True,
+    parser.add_argument("from_currency",
                         help="Currency to convert from (USD, EUR, etc.)")
-    parser.add_argument("--to", dest="to_currency", required=True,
+    parser.add_argument("to_currency",
                         help="Currency to convert to (DKK, EUR, etc.)")
-    parser.add_argument("--amount", type=float, required=True, help="Amount to convert")
+    parser.add_argument("amount", type=float,  help="Amount to convert")
     parser.add_argument("-v", action="count", help="Provides a verbose description. One -v is currently the only supported option")
 
     args = parser.parse_args()
