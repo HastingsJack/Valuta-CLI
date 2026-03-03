@@ -7,7 +7,7 @@ Simple CLI program for Exchange Rate Calculation via ExchangeRate API.
 1. Clone repository
 2. Create virtual environment:
 
-   python -m venv venv
+   python -m venv venv 
 
 4. Activate the virtual environment:
 
@@ -23,9 +23,10 @@ Simple CLI program for Exchange Rate Calculation via ExchangeRate API.
 
 ## How to use
 
-Example:
+***Example:*** <br />
 python valuta.py --from USD --to DKK --amount 100
 
-On the first run, you'll be asked to add your API key as such:
-        Please enter your ExchangeRate API key:
-After hitting enter, your key will be saved and you won't be asked again. 
+On first use, you'll be asked to add your API key: *Please enter your ExchangeRate API key:* <br />
+After hitting enter, your key will be saved and you won't be asked again. <br />
+
+
