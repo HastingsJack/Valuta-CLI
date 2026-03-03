@@ -40,6 +40,9 @@ def main():
     try:
         response = requests.get(url)
         data = response.json()
+        if data.get("result") == "error" :
+            print("Invald API key")
+            exit()
     except Exception as e:
         print(f"Call failure: {e}")
         exit()
