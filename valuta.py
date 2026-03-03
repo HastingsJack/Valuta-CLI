@@ -8,7 +8,9 @@ env_path = Path(__file__).parent / ".env"
 load_dotenv(dotenv_path=env_path)
 
 def main():
-    parser = argparse.ArgumentParser(description="Currency Exchange Calc - simple currency converter")
+    parser = argparse.ArgumentParser(
+        description="Currency Exchange Calc - simple currency converter",
+        usage="python valuta.py --from USD --to DKK --amount 600")
     parser.add_argument("--key", help="ExchangeRate API key")
     parser.add_argument("--from", dest="from_currency", required=True,
                         help="Currency to convert from (USD, EUR, etc.)")
