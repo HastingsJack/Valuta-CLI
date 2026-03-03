@@ -33,4 +33,5 @@ python valuta.py USD DKK 100
 On first use, you'll be asked to add your API key: *Please enter your ExchangeRate API key:* <br />
 After hitting enter, your key will be saved and you won't be asked again. <br />
 
+If help is needed type *python valuta.py --help*
 
