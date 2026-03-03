@@ -17,7 +17,7 @@ def main():
     parser.add_argument("--to", dest="to_currency", required=True,
                         help="Currency to convert to (DKK, EUR, etc.)")
     parser.add_argument("--amount", type=float, required=True, help="Amount to convert")
-    parser.add_argument("-v", action="count", help="Provides a verbose description. Use -vv for extra verbose")
+    parser.add_argument("-v", action="count", help="Provides a verbose description. One -v is currently the only supported option")
 
     args = parser.parse_args()
 
