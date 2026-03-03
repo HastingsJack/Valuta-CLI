@@ -41,11 +41,14 @@ def main():
         print(f"Call failure: {e}")
         exit()
 
-    if "conversion_rates" not in data:
+    if data.get("result") != "success":
+        print(f"Currency '{args.from_currency}' not found.")
+        exit()
+        
+    rate = data["conversion_rates"].get(args.to_currency)
+    if not rate:
         print(f"Currency '{args.to_currency}' not found.")
         exit()
-
-    rate = data["conversion_rates"].get(args.to_currency)
 
     result = rate * args.amount
     print(f"{args.amount} {args.from_currency} = {result:.2f} {args.to_currency}")
