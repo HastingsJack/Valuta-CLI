@@ -17,6 +17,7 @@ def main():
     parser.add_argument("--to", dest="to_currency", required=True,
                         help="Currency to convert to (DKK, EUR, etc.)")
     parser.add_argument("--amount", type=float, required=True, help="Amount to convert")
+    parser.add_argument("-v", action="count", help="Provides a verbose description. Use -vv for extra verbose")
 
     args = parser.parse_args()
 
@@ -53,8 +54,12 @@ def main():
         exit()
 
     result = rate * args.amount
-    print(f"{args.amount} {args.from_currency} = {result:.2f} {args.to_currency}")
 
+    if args.v is None:
+        print(f"{args.amount} {args.from_currency} = {result:.2f} {args.to_currency}")
+    elif args.v == 1:
+        print(f"1 {args.from_currency} = {rate:.4f} {args.to_currency}")
+        print(f"{args.amount} {args.from_currency} = {result:.2f} {args.to_currency}")
 
 if __name__ == "__main__":
     main()
