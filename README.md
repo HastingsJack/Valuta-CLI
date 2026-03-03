@@ -7,19 +7,19 @@ Simple CLI program for Exchange Rate Calculation via ExchangeRate API.
 1. Clone repository
 2. Create virtual environment:
 
-python -m venv venv
+   python -m venv venv
 
-3. Activate the virtual environment:
+4. Activate the virtual environment:
 
-Windows:
-venv\Scripts\activate
+   Windows:
+   venv\Scripts\activate
 
-Mac/Linux:
-source venv/bin/activate
+   Mac/Linux:
+   source venv/bin/activate
 
 4. Install dependencies:
 
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 ## How to use
 
